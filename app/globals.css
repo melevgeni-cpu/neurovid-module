@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg-primary: #0A0A0F;
+    --bg-secondary: #121218;
+    --bg-card: #1A1A2E;
+    --text-primary: #F5F0EB;
+    --text-secondary: #c0c0c8;
+    --border-light: rgba(255, 255, 255, 0.08);
+    --header-bg: rgba(10, 10, 15, 0.7);
+    --shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    --modal-bg: #1A1A2E;
+    --input-bg: #ffffff;
+    --input-text: #1f1f1f;
+  }
+
+  .light {
+    --bg-primary: #F5F0EB;
+    --bg-secondary: #E2D9CD;
+    --bg-card: #ffffff;
+    --text-primary: #1e1a16;
+    --text-secondary: #3a322c;
+    --border-light: rgba(0, 0, 0, 0.08);
+    --header-bg: rgba(245, 240, 235, 0.7);
+    --shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    --modal-bg: #ffffff;
+    --input-bg: #f9f9f9;
+    --input-text: #1a1a1a;
+  }
+
+  body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    transition: background-color 0.3s, color 0.2s;
+  }
+
+  /* Noise overlay effect */
+  .noise-overlay {
+    position: relative;
+  }
+  .noise-overlay::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMDAiIGhlaWdodD0iMzAwIj48ZmlsdGVyIGlkPSJmIj48ZmVUdXJidWxlbmNlIHR5cGU9ImZyYWN0YWxOb2lzZSIgYmFzZUZyZXF1ZW5jeT0iLjc0IiBudW1PY3RhdmVzPSIzIiAvPjwvZmlsdGVyPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbHRlcj0idXJsKCNmKSIgb3BhY2l0eT0iMC4wNCIgLz48L3N2Zz4=');
+    opacity: 0.03;
+    z-index: 1;
+    mix-blend-mode: overlay;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-accent-warm text-black font-bold py-3 px-6 rounded-full transition hover:scale-105;
+  }
+  .glass-card {
+    @apply bg-white/5 border border-white/10 backdrop-blur-sm rounded-3xl;
+  }
+}

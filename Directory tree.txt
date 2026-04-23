@@ -1,0 +1,70 @@
+neurovid-landing/
+├── app/
+│   ├── api/
+│   │   └── contact/
+│   │       └── route.ts
+│   ├── favicon.ico                 # ⚠️ файл иконки (нужно добавить самостоятельно)
+│   ├── globals.css
+│   ├── layout.tsx
+│   ├── page.tsx
+│   └── providers.tsx
+├── components/
+│   ├── layout/
+│   │   ├── Footer.tsx
+│   │   ├── Header.tsx
+│   │   ├── MobileMenu.tsx
+│   │   └── OrbitNav.tsx
+│   ├── sections/
+│   │   ├── BusinessSection.tsx
+│   │   ├── CreatorsSection.tsx
+│   │   ├── FamilySection.tsx
+│   │   ├── FAQSection.tsx
+│   │   ├── Hero.tsx
+│   │   ├── PortfolioSection.tsx
+│   │   ├── PricingSection.tsx
+│   │   ├── ReviewsSection.tsx
+│   │   └── WhyUsSection.tsx
+│   └── ui/
+│       ├── ComparisonSlider.tsx
+│       ├── ContactForm.tsx
+│       ├── Modal.tsx
+│       ├── ThemeToggle.tsx
+│       └── VideoPlayer.tsx
+├── hooks/
+│   ├── useModal.ts
+│   ├── useScrollSpy.ts
+│   └── useTheme.ts
+├── lib/
+│   └── utils.ts
+├── public/
+│   ├── images/
+│   │   ├── Foto-Rosa1.jpg
+│   │   ├── Foto-Rosa2.jpg
+│   │   └── portfolio/
+│   │       ├── 1.jpg
+│   │       ├── 2.jpg
+│   │       └── 3.jpg
+│   └── videos/
+│       ├── Rosa1_1280x720.mp4
+│       ├── business-preview.mp4
+│       └── reels/
+│           ├── reel1.mp4
+│           ├── reel2.mp4
+│           └── reel3.mp4
+├── .env.local.example
+├── .gitignore
+├── next-env.d.ts                  # генерируется автоматически после первого запуска
+├── next.config.js
+├── package-lock.json              # создаётся после npm install
+├── package.json
+├── postcss.config.js
+├── README.md
+├── tailwind.config.ts
+└── tsconfig.json
+
+📌 Пояснения
+app/favicon.ico — бинарный файл, его нужно добавить самостоятельно (или временно удалить строку из layout.tsx, чтобы не было ошибки).
+
+next-env.d.ts и package-lock.json появятся автоматически после установки зависимостей и первого запуска, их создавать вручную не нужно.
+
+public/images/ и public/videos/ — папки с медиафайлами. Замените имена на свои реальные файлы или используйте плейсхолдеры из примера.
